@@ -1,5 +1,9 @@
 #include <LiquidCrystal_I2C.h>     //LiquidCrystal 라이브러리 추가 
-LiquidCrystal_I2C lcd(0x27, 16, 2);  //lcd 객체 선언
+LiquidCrystal_I2C lcd(0x27, 16, 2);  //lcd 객체 선언 주소 다르면 0x3F를 쓰거나 https://codingrun.com/119에서 주소검색법 참조
+
+// #include <LiquidCrystal_I2C.h>      // LCD 2004 I2C용 라이브러리 20x4 사이즈 lcd모니터 사용시 주석해제
+// LiquidCrystal_I2C lcd(0x3F,20,4);   // 접근주소: 0x3F or 0x27
+
 
 String mode = "Air Con"; // "Air Con"이 에어컨, 공조 뜻 모두 포함하는데 어떻게?
 boolean state = true;    // 어떤 조건하에 !state를 하면 
